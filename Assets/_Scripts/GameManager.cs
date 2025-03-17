@@ -51,6 +51,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
             Debug.LogWarning("ScoreCounterUI reference is null!");
         }
 
+        CameraShake.Shake();
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
         if (currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
     }
