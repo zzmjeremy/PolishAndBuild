@@ -1529,6 +1529,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14672f4c723dc224dadf2022107ce263, type: 3}
+--- !u!114 &968135059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2747540446023531239, guid: 14672f4c723dc224dadf2022107ce263, type: 3}
+  m_PrefabInstance: {fileID: 968135058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7491c6fe69bc8b2468926a399544674e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &987098519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2379,7 @@ MonoBehaviour:
   maxLives: 3
   ball: {fileID: 4561635119993004754}
   bricksContainer: {fileID: 796630123}
+  scoreCounterUI: {fileID: 968135059}
 --- !u!1001 &1708692028
 PrefabInstance:
   m_ObjectHideFlags: 0
