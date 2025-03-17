@@ -45,5 +45,6 @@ public class Ball : MonoBehaviour
         rb.AddForce(transform.forward * ballLaunchSpeed, ForceMode.Impulse);
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         isBallActive = true;
+        AudioManager.Instance.PlaySFX("shoot");
     }
 }
