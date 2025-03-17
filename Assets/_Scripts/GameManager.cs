@@ -6,6 +6,10 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private Ball ball;
     [SerializeField] private Transform bricksContainer;
 
+    // New fields for score tracking
+    [SerializeField] private ScoreCounterUI scoreCounterUI; // Reference to ScoreCounterUI component
+    private int currentScore = 0;
+
     private int currentBrickCount;
     private int totalBrickCount;
 
@@ -33,9 +37,23 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // implement particle effect here
         // add camera shake here
         currentBrickCount--;
+
+        // Increase the score by 1 and update UI
+        currentScore++;
+        Debug.Log("Current Score: " + currentScore);  // Debug output to check score increment
+
+        if (scoreCounterUI != null)
+        {
+            scoreCounterUI.UpdateScore(currentScore);
+        }
+        else
+        {
+            Debug.LogWarning("ScoreCounterUI reference is null!");
+        }
+
         CameraShake.Shake();
         Debug.Log($"Destroyed Brick at {position}, {currentBrickCount}/{totalBrickCount} remaining");
-        if(currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
+        if (currentBrickCount == 0) SceneHandler.Instance.LoadNextScene();
     }
 
     public void KillBall()
