@@ -2305,9 +2305,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2054714182}
     - target: {fileID: 6846597512200348566, guid: 70365e4fb3127d44db431487cd761c1c, type: 3}
+      propertyPath: trailTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846597512200348566, guid: 70365e4fb3127d44db431487cd761c1c, type: 3}
       propertyPath: ballAnchor
       value: 
       objectReference: {fileID: 269931761}
+    - target: {fileID: 6846597512200348566, guid: 70365e4fb3127d44db431487cd761c1c, type: 3}
+      propertyPath: trailRenderer
+      value: 
+      objectReference: {fileID: 2054714183}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2332,6 +2340,11 @@ MonoBehaviour:
 --- !u!54 &2054714182 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8959031048966596842, guid: 70365e4fb3127d44db431487cd761c1c, type: 3}
+  m_PrefabInstance: {fileID: 2054714179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &2054714183 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 2079744172556482774, guid: 70365e4fb3127d44db431487cd761c1c, type: 3}
   m_PrefabInstance: {fileID: 2054714179}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
