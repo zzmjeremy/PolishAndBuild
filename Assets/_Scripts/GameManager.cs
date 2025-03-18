@@ -19,6 +19,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         ball.ResetBall();
         totalBrickCount = bricksContainer.childCount;
         currentBrickCount = bricksContainer.childCount;
+        AudioManager.Instance.PlaySFX("shoot");
     }
 
     private void OnDisable()
@@ -34,6 +35,7 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     public void OnBrickDestroyed(Vector3 position)
     {
         // fire audio here
+        AudioManager.Instance.PlaySFX("break");
         // implement particle effect here
         // add camera shake here
         currentBrickCount--;
@@ -62,5 +64,6 @@ public class GameManager : SingletonMonoBehavior<GameManager>
         // update lives on HUD here
         // game over UI if maxLives < 0, then exit to main menu after delay
         ball.ResetBall();
+        AudioManager.Instance.PlaySFX("fail");
     }
 }
