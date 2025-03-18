@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8314677691430707117}
   - component: {fileID: 2863733098164547406}
   - component: {fileID: 1258617761497222491}
-  - component: {fileID: 5660875426900588733}
   m_Layer: 0
   m_Name: Brick
   m_TagString: Bricks
@@ -137,19 +136,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10226254e80c0b94bb47101bbfe22b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5660875426900588733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5252904249612493878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737d7bf278a60bd40aeee745944f8f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  punch: {x: 0.2, y: 0.2, z: 0.2}
-  duration: 0.3
-  vibrato: 10
-  elasticity: 1

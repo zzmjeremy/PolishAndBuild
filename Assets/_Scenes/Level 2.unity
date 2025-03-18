@@ -1559,7 +1559,6 @@ Transform:
   - {fileID: 2139900820}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
 --- !u!1 &987098519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2050,6 @@ GameObject:
   - component: {fileID: 1355270213}
   - component: {fileID: 1355270212}
   - component: {fileID: 1355270211}
-  - component: {fileID: 1355270215}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2177,20 +2175,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 63.454, y: 0, z: 0}
---- !u!114 &1355270215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355270210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e54bfd9040047f42b256b633f860ee8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultDuration: 0.2
-  defaultStrength: 0.2
 --- !u!1 &1489119450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2398,6 @@ MonoBehaviour:
   maxLives: 3
   ball: {fileID: 4561635119993004754}
   bricksContainer: {fileID: 796630123}
-  scoreCounterUI: {fileID: 968135059}
 --- !u!1001 &1708692028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2874,5 +2857,3 @@ SceneRoots:
   - {fileID: 1576275138}
   - {fileID: 1715049655}
   - {fileID: 933871213}
-
-
