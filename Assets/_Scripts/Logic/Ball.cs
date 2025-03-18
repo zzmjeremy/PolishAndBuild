@@ -10,7 +10,31 @@ public class Ball : MonoBehaviour
     [SerializeField] private Transform ballAnchor;
     [SerializeField] private Rigidbody rb;
 
+    // New Fields for TrailRenderer
+    [Header("Trail Settings")]
+    [Tooltip("Drag your TrailRenderer component here.")]
+    [SerializeField] private TrailRenderer trailRenderer;
+
+    [Tooltip("Duration of the trail in seconds.")]
+    [SerializeField] private float trailTime = 3f;
+
+    [Tooltip("AnimationCurve to control the trail width from start (near the ball) to end.")]
+    [SerializeField]
+    private AnimationCurve trailWidthCurve = new AnimationCurve(
+        new Keyframe(0f, 0.2f),   // width at the ball
+        new Keyframe(1f, 0f)     // width at the tail end
+    );
+
     private bool isBallActive;
+    private void Start()
+    {
+        // If TrailRenderer is assigned, set its parameters
+        if (trailRenderer != null)
+        {
+            trailRenderer.time = trailTime;
+            trailRenderer.widthCurve = trailWidthCurve;
+        }
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -35,6 +59,11 @@ public class Ball : MonoBehaviour
         transform.localPosition = Vector3.zero;
         transform.rotation = Quaternion.identity;
         isBallActive = false;
+        // Clear the trail so it doesn't draw a line from the kill zone back to the anchor
+        if (trailRenderer != null)
+        {
+            trailRenderer.Clear();
+        }
     }
 
     public void FireBall()
